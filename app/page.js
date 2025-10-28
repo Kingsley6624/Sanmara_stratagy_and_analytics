@@ -1,8 +1,8 @@
 import React from 'react'
-import HeroSection from './components/HeroSection'
-import About from './components/About'
-import Approach from './components/Approach'
-import Services from './components/Services'
+import HeroSection from '../components/HeroSection'
+import About from '../components/About'
+import Approach from '../components/Approach'
+import Services from '../components/Services'
 
 const HomePage = () => {
   return (

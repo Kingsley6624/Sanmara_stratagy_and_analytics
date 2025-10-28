@@ -1,0 +1,6 @@
+[
+  { "title": "Business & Market Research", "icon": "/case-study.png", "description": "We provide deep, evidence-based insights into your markets,competitors, and customers. Our research helps organizations make confident strategic moves, identify new opportunities, and anticipate industry trends."},
+  { "title": "Financial & Strategic Consulting", "icon": "/broker.png", "description": "We partner with businesses to align financial performance with long-term strategy. From forecasting and cost analysis to capital strategy and business transformation, we ensure that every decision adds value." },
+  { "title": "Fraud Analytics & Risk Management", "icon": "/risk-management.png", "description": "Fraud erodes trust and profitability we help you stay ahead of it. Our data-driven fraud analytics framework identifies suspicious patterns, enhances transaction monitoring, and strengthens fraud defense mechanisms." },
+  { "title": "Data Intelligence & Insights", "icon": "/case-study.png", "description": "We turn raw data into strategic insight. Sanmara helps organizations leverage analytics, dashboards, and AI tools to make informed, real-time decisions." }
+]
