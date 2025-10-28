@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white flex flex-col-reverse md:flex-row py-6">
+    <section className="bg-white flex flex-col-reverse md:flex-row py-6 relative z-10">
       <div className="flex-1 flex flex-col justify-center items-center md:items-start px-4 md:px-0">
         <h1 className="text-4xl font-bold text-center md:text-left mt-8 md:mt-0 md:ml-16">
           Accelerate Your Business Growth Through Research And Data
@@ -22,7 +22,7 @@ const HeroSection = () => {
           </Link>
         </div>
       </div>
-      <div className="flex-1 relative w-full h-[400px] overflow-hidden">
+      <div className="flex-1 relative w-full h-[400px] overflow-hidden z-0">
         <video
           autoPlay
           muted

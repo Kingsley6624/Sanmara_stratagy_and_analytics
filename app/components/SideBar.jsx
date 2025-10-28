@@ -12,7 +12,7 @@ const SideBar = () => {
     <div>
       {isOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black/70  z-0 shadow-lg flex justify-end md:hidden mt-12"
+          className="fixed top-0 left-0 w-full h-full bg-black/70  z-30 shadow-lg flex justify-end md:hidden mt-12"
           // onClick={() => setIsOpen(false)}
         >
           <div className="w-[50%] max-w-sm h-screen bg-white p-3 pt-8 z-50 shadow-lg slide-in-right flex flex-col overflow-y-auto scroll-smooth">
