@@ -4,9 +4,25 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className="py-6 bg-gray-800 mt-[3.1rem] divide-y">
-      <div>
-        <p className="text-white">hello</p>
+    <section className="py-6 bg-gray-800 mt-[3.1rem] text-white px-[5%]">
+      <div className="flex flex-col md:flex-row">
+        <div>
+          <Link href="/">
+          <img src="/logo.jpg" alt="SanMara Logo" className="h-8 md:12" />
+        </Link>
+        </div>
+        <ul className="w-full">
+          <li>
+            <Link href="/about" className="hover:underline">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="hover:underline">
+              Contact
+            </Link>
+          </li>
+        </ul>
       </div>
 
       <div>
@@ -14,11 +30,11 @@ const Footer = () => {
       </div>
       <div className="mx-auto px-4 pag-4 text-center text-white inter grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <Link href="/terms" className="hover:underline">
+          <Link href="/terms" className="">
             Terms & Conditions
           </Link>
           <span className="mx-2">|</span>
-          <Link href="/privacy" className="hover:underline">
+          <Link href="/privacy" className="">
             Privacy Policy
           </Link>
         </div>

@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "category": "Services",
+    "links": [
+      {
+        "title": "Consulting",
+        "url": "/consulting"
+      },
+      {
+        "title": "Support",
+        "url": "/support"
+      },
+      {
+        "title": "Custom Solutions",
+        "url": "/custom-solutions"
+      },
+      {
+        "title": "Training & Workshops",
+        "url": "/training-workshops"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "category": "Industries",
+    "links": [
+      {
+        "title": "Healthcare",
+        "url": "/industries/healthcare"
+      },
+      {
+        "title": "Finance",
+        "url": "/industries/finance"
+      },
+      {
+        "title": "Education",
+        "url": "/industries/education"
+      },
+      {
+        "title": "Retail",
+        "url": "/industries/retail"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Blog",
+    "links": [
+      {
+        "title": "Latest Articles",
+        "url": "/blog/latest-articles"
+      },
+      {
+        "title": "Tutorials",
+        "url": "/blog/tutorials"
+      },
+      {
+        "title": "Case Studies",
+        "url": "/blog/case-studies"
+      },
+      {
+        "title": "Industry News",
+        "url": "/blog/industry-news"
+      }
+    ]
+  }
+]

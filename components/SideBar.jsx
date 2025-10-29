@@ -1,7 +1,6 @@
 "use client";
 import { useSidebar } from "./NavigationWrapper";
 import Link from "next/link";
-import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 
@@ -22,6 +21,7 @@ const SideBar = () => {
                   <Link
                     href="/about"
                     className="relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900"
+                    onClick={()=>setIsOpen(false)}
                   >
                     About
                   </Link>
@@ -30,6 +30,7 @@ const SideBar = () => {
                   <Link
                     href="/services"
                     className="h-full flex items-center justify-between px-2 transition-all duration-300 hover:text-blue-900"
+                    onClick={()=>setIsOpen(false)}
                   >
                     Services
                   </Link>
@@ -46,6 +47,7 @@ const SideBar = () => {
                       <Link
                         href="/services/consulting"
                         className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={()=>setIsOpen(false)}
                       >
                         Consulting
                       </Link>
@@ -54,6 +56,7 @@ const SideBar = () => {
                       <Link
                         href="/services/analytics"
                         className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={()=>setIsOpen(false)}
                       >
                         Analytics
                       </Link>
@@ -62,6 +65,7 @@ const SideBar = () => {
                       <Link
                         href="/services/strategy"
                         className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={()=>setIsOpen(false)}
                       >
                         Strategy
                       </Link>
@@ -72,6 +76,7 @@ const SideBar = () => {
                   <Link
                     href="/industries"
                     className="flex items-center px-2 transition-all duration-300 hover:text-blue-900"
+                    onClick={()=>setIsOpen(false)}
                   >
                     Industries
                   </Link>
@@ -86,6 +91,7 @@ const SideBar = () => {
                   <Link
                     href="/blog"
                     className="relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900"
+                    onClick={()=>setIsOpen(false)}
                   >
                     Blog
                   </Link>
@@ -94,6 +100,7 @@ const SideBar = () => {
                   <Link
                     href="/contact"
                     className="relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900"
+                    onClick={()=>setIsOpen(false)}
                   >
                     Contact
                   </Link>
