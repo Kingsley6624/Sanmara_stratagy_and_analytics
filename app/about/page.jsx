@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-const About = () => {
+const AboutPage = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 mt-[3.1rem]">
       <div className="max-w-6xl mx-auto px-6 text-center md:text-left inter">
         <h2 className="text-3xl font-bold text-[#1E2A38] mb-4">Who We Are</h2>
         <p className="text-gray-700 leading-relaxed">
@@ -15,7 +15,7 @@ const About = () => {
         </p>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default AboutPage
