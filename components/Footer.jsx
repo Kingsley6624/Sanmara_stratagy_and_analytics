@@ -1,34 +1,41 @@
-import React from "react";
 import Link from "next/link";
+import Links from "../data/links.json"
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { ul } from "framer-motion/client";
 
 const Footer = () => {
+  
   return (
-    <section className="py-6 bg-gray-800 mt-[3.1rem] text-white px-[5%]">
-      <div className="flex flex-col md:flex-row">
+    <section className="py-6 bg-gray-800 text-white px-[5%]">
+      <div className="flex flex-col md:flex-row mb-6 md:mb-12 justify-center md:justify-start items-center md:items-start">
         <div>
           <Link href="/">
-          <img src="/logo.jpg" alt="SanMara Logo" className="h-8 md:12" />
+          <img src="/white-logo.png" alt="SanMara Logo" className="h-8 md:h-12" />
         </Link>
         </div>
-        <ul className="w-full">
-          <li>
-            <Link href="/about" className="hover:underline">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:underline">
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4 mt-4 md:mt-0 md:ml-20 space-y-2 md:space-y-0">
+          {Links.map((section) => (
+            <ul key={section.id}>
+              <li className="font-bold mb-2 text-xl">{section.category}</li>
+              {section.links.map((sublink, index) => (
+                <li key={index} className="mb-1">
+                  <Link
+                    href={sublink.href}
+                    className="hover:underline"
+                  >
+                    {sublink.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
       </div>
 
       <div>
-        <hr className="border-gray-400 mb-4 w-[80%] mx-auto" />
+        <hr className="border-gray-400 w-[80%] mx-auto" />
       </div>
-      <div className="mx-auto px-4 pag-4 text-center text-white inter grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="mx-auto px-4 pag-4 text-center text-white inter grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 md:mt-12">
         <div>
           <Link href="/terms" className="">
             Terms & Conditions

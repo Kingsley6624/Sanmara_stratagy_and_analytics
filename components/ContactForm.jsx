@@ -19,11 +19,13 @@ export default function ContactForm() {
 
     if (!form.name || !form.email || !form.message) {
       setError("Please fill in all fields.");
+      setTimeout(() => setError(""), 3000);
       return;
     }
 
     if (!form.email.includes("@")) {
       setError("Please enter a valid email address.");
+      setTimeout(() => setError(""), 3000);
       return;
     }
 
@@ -33,7 +35,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6">
+    <form onSubmit={handleSubmit} className="max-w-xl space-y-6 text-start">
       <div>
         <label className="block text-sm font-medium text-gray-700">Name</label>
         <input
@@ -61,7 +63,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           rows={4}
-          className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 block w-full border border-gray-300 rounded-md p-2 resize-none"
         />
       </div>
       {error && <p className="text-red-500 text-sm">{error}</p>}

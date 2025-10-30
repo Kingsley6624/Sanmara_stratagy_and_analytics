@@ -5,19 +5,19 @@
     "links": [
       {
         "title": "Consulting",
-        "url": "/consulting"
+        "href": "/consulting"
       },
       {
         "title": "Support",
-        "url": "/support"
+        "href": "/support"
       },
       {
         "title": "Custom Solutions",
-        "url": "/custom-solutions"
+        "href": "/custom-solutions"
       },
       {
         "title": "Training & Workshops",
-        "url": "/training-workshops"
+        "href": "/training-workshops"
       }
     ]
   },
@@ -28,19 +28,19 @@
     "links": [
       {
         "title": "Healthcare",
-        "url": "/industries/healthcare"
+        "href": "/industries/healthcare"
       },
       {
         "title": "Finance",
-        "url": "/industries/finance"
+        "href": "/industries/finance"
       },
       {
         "title": "Education",
-        "url": "/industries/education"
+        "href": "/industries/education"
       },
       {
         "title": "Retail",
-        "url": "/industries/retail"
+        "href": "/industries/retail"
       }
     ]
   },
@@ -50,19 +50,19 @@
     "links": [
       {
         "title": "Latest Articles",
-        "url": "/blog/latest-articles"
+        "href": "/blog/latest-articles"
       },
       {
         "title": "Tutorials",
-        "url": "/blog/tutorials"
+        "href": "/blog/tutorials"
       },
       {
         "title": "Case Studies",
-        "url": "/blog/case-studies"
+        "href": "/blog/case-studies"
       },
       {
         "title": "Industry News",
-        "url": "/blog/industry-news"
+        "href": "/blog/industry-news"
       }
     ]
   }

@@ -13,7 +13,7 @@ const getVariant = (index) => {
   };
 };
 
-const ServicesCard = ({ icon, title, description, index, isLast }) => {
+const ServicesCard = ({ icon, title, desc, index, isLast }) => {
   return (
     <motion.div
       key={index}
@@ -35,7 +35,7 @@ const ServicesCard = ({ icon, title, description, index, isLast }) => {
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{title}</h3>
-                <p className="text-gray-600">{description}</p>
+                <p className="text-gray-600">{desc}</p>
     </motion.div>
   );
 };
