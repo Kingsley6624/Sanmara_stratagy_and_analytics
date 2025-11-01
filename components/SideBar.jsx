@@ -19,6 +19,15 @@ const SideBar = () => {
               <ul className="space-y-6 text-sm font-medium text-gray-700 h-20 flex flex-col divide-y">
                 <li>
                   <Link
+                    href="https://calendly.com/chinedukingsley3030/30min"
+                    className="relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900"
+                    onClick={()=>setIsOpen(false)}
+                  >
+                    Book
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/about"
                     className="relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900"
                     onClick={()=>setIsOpen(false)}
