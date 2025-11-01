@@ -22,6 +22,18 @@ const NavBar = () => {
         <ul className="space-x-6 text-sm font-medium text-gray-700 h-20 md:flex hidden">
           <li>
             <Link
+              href="https://calendly.com/chinedukingsley3030/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
+                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full
+                ${pathname === "/book" ? "after:w-full text-blue-900" : ""}`}
+            >
+              Book
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/about"
               className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
                 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sanmarastratagyandanalytics.vercel.app/sitemap.xml 
