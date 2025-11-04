@@ -50,10 +50,10 @@ const NavBar = () => {
               ${pathname === "/services" ? "after:w-full text-blue-900" : ""}
             `}>
               Services
-              <RiArrowDropDownLine className="inline" />
+              {/* <RiArrowDropDownLine className="inline" /> */}
             </Link>
             <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-50">
-              <ul className="py-2 text-sm text-gray-700">
+              {/* <ul className="py-2 text-sm text-gray-700">
                 <li>
                   <Link
                     href="/services/consulting"
@@ -78,7 +78,7 @@ const NavBar = () => {
                     Strategy
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </li>
           <li>
@@ -92,7 +92,7 @@ const NavBar = () => {
               `}
             >
               Industries
-              <RiArrowDropDownLine className="inline" />
+              {/* <RiArrowDropDownLine className="inline" /> */}
             </Link>
           </li>
           <li>

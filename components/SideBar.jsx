@@ -43,14 +43,14 @@ const SideBar = () => {
                   >
                     Services
                   </Link>
-                  <button
+                  {/* <button
                     className=" h-full"
                     onClick={() => toggleExpand("services")}
                   >
                     {expanded.services ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
-                  </button>
+                  </button> */}
                 </li>
-                {expanded.services && (
+                {/* {expanded.services && (
                   <ul className="text-sm text-gray-700 -mt-2 divide-y">
                     <li>
                       <Link
@@ -80,7 +80,7 @@ const SideBar = () => {
                       </Link>
                     </li>
                   </ul>
-                )}
+                )} */}
                 <li className="flex justify-between items-center">
                   <Link
                     href="/industries"
@@ -89,12 +89,12 @@ const SideBar = () => {
                   >
                     Industries
                   </Link>
-                  <button
+                  {/* <button
                     className=" h-full"
                     onClick={() => toggleExpand("industries")}
                   >
                     {expanded.industries ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
-                  </button>
+                  </button> */}
                 </li>
                 <li>
                   <Link

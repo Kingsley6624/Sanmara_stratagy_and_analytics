@@ -78,7 +78,7 @@ export default async function OurServices() {
           </div>
         </div>
       </section>
-      <IndustriesWeServe />
+      
       <WhyChoseUs />
      
       <section className="py-24 bg-linear-to-r from-indigo-900 to-blue-700 text-white text-center px-6">
