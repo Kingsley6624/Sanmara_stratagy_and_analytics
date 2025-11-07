@@ -17,9 +17,7 @@ const ServicesCard = ({ icon, title, desc, index, isLast }) => {
   return (
     <motion.div
       key={index}
-      className={`bg-gray-50 p-8 rounded-lg shadow-sm ${
-        isLast ? "md:col-span-3 md:justify-self-center w-full md:w-2/3 lg:w-1/2" : ""
-      }`}
+      className={`bg-white p-8 rounded-lg shadow-sm flex flex-col items-center md:items-start text-center md:text-left transition-all`}
       variants={getVariant(index)}
       initial="hidden"
       whileInView="visible"
@@ -27,17 +25,14 @@ const ServicesCard = ({ icon, title, desc, index, isLast }) => {
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-     <div className="rounded-full p-3 w-fit bg-white shadow-md mx-auto mb-4">
-                  <img
-                    className="h-16"
-                    src={icon}
-                    alt={title}
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{title}</h3>
-                <p className="text-gray-600">{desc}</p>
+      <div className="rounded-full p-3 w-fit bg-[#EFF6FF] shadow-md mb-4 sm:mb-6 mx-auto md:mx-0">
+        <img className="h-12" src={icon} alt={title} />
+      </div>
+      <h3 className="text-xl font-semibold mb-3">{title}</h3>
+      <p className="text-gray-600">{desc}</p>
     </motion.div>
   );
 };
 
 export default ServicesCard;
+

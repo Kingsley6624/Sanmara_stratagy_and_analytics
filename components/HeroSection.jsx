@@ -5,20 +5,20 @@ const HeroSection = () => {
   return (
     <section className="bg-white flex flex-col-reverse md:flex-row py-6 relative z-10">
       <div className="flex-1 flex flex-col justify-center items-center md:items-start px-4 md:px-0">
-        <h1 className="text-4xl font-bold text-center md:text-left mt-8 md:mt-0 md:ml-16">
+        <h1 className="text-4xl font-bold  md:text-left mt-8 md:mt-0 md:ml-16">
           Accelerate Your Business Growth Through Research And Data
           Driven Strategies.
         </h1>
-        <p className="text-center md:text-left mt-4 md:ml-16 md:mr-16">
+        <p className=" md:text-left mt-4 md:ml-16 md:mr-16">
           We specialize in business research, financial strategy, fraud analytics, and data intelligence helping organizations turn complex information into actionable insights that drive growth, reduce risk, and improve performance.
 
         </p>
-        <div className="flex justify-center md:justify-start mt-6 md:ml-16 mb-8">
-          <Link href={"/services"} className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+        <div className="flex flex-col md:flex-row self-start  md:justify-start mt-6 md:ml-16 mb-8 gap-4">
+          <Link href={"/services"} className="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition duration-300 w-fit">
             Learn More
           </Link>
-          <Link href={"/contact"} className="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition duration-300 ml-4">
-            Contact Us
+          <Link href={"https://calendly.com/chinedukingsley3030/30min"} className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300 w-fit">
+            Book A Consultation
           </Link>
         </div>
       </div>

@@ -64,7 +64,7 @@ export default async function OurServices() {
                 <h3 className="text-2xl font-semibold mb-4 text-blue-900">
                   {service.title}
                 </h3>
-                <p className="text-gray-700 mb-4">{service.desc}</p>
+                <p className="text-gray-700 mb-4">{service.body}</p>
                 <ul className="space-y-2 text-gray-600">
                   {service.points.map((p, idx) => (
                     <li key={idx} className="flex items-start gap-2">
