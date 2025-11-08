@@ -39,7 +39,7 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-[5%] py-2 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="">
-          <img src="/logo.png" alt="SanMara Logo" className="h-8 md:12 " />
+          <img src={scrolled ? "/logo.png" : "/white-logo.png"} alt="SanMara Logo" className="h-8 md:12 " />
         </Link>
 
         {/* Navigation Links */}

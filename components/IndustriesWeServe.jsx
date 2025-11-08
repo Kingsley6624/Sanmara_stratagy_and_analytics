@@ -20,11 +20,11 @@ const IndustriesWeServe = () => {
           Sanmara’s expertise spans multiple sectors, giving us the versatility
           to adapt to any business landscape. Our key industries include:
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-gray-800 font-medium">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-800 font-medium">
           {industries.map((ind, idx) => (
             <div
               key={idx}
-              className="bg-blue-700/70 text-white border border-gray-200 rounded-2xl py-6 px-6 hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
+              className="bg-blue-400 text-white border border-gray-200 rounded-2xl py-6 px-6 hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
             >
               {ind}
             </div>
