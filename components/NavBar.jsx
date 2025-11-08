@@ -3,23 +3,47 @@
 import React from "react";
 import Link from "next/link";
 import { RiArrowDropDownLine } from "react-icons/ri";
-
 import { usePathname } from "next/navigation";
 import ToggleMenu from "./ToggleMenu";
+import { useEffect, useState } from "react";
+
+
+  
+
+  
 
 const NavBar = () => {
   const pathname = usePathname();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Trigger color change after scrolling 50px
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-white shadow-md fixed top-0 w-full z-50">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white shadow-md text-gray-800"
+          : "bg-blue-400 text-white"
+      }`}
+    >
+
       <div className="max-w-7xl mx-auto px-[5%] py-2 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
-          <img src="/logo.jpg" alt="SanMara Logo" className="h-8 md:12" />
+        <Link href="/" className="">
+          <img src="/logo.png" alt="SanMara Logo" className="h-8 md:12 " />
         </Link>
 
         {/* Navigation Links */}
-        <ul className="space-x-6 text-sm font-medium text-gray-700 h-20 md:flex hidden">
+        <ul className="space-x-6 text-sm font-medium  h-16 md:flex hidden">
           <li>
             <Link
               href="/about"

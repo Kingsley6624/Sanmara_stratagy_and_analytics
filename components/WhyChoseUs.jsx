@@ -23,7 +23,7 @@ const WhyChoseUs = () => {
           Why Choose Sanmara
         </h2>
         <p className="text-blue-100 mb-12">
-          Insight. Integrity. Impact. — the principles that define our work.
+          Insight. Integrity. Impact. the principles that define our work.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           {whyChoose.map((item, idx) => (

@@ -10,7 +10,7 @@ const Services = async () => {
           Our Core Services
         </h2>
         <p className="text-gray-700 mb-8 text-lg">
-          At SanMara, our services are built around four strategic pillars
+          At Sanmara, our services are built around four strategic pillars
           designed to help you thrive in a data driven world.
         </p>
 

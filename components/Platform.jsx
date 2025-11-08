@@ -41,7 +41,7 @@ export default function PlatformsScroll() {
               <img
                 src={platform.logo}
                 alt={platform.name}
-                className="h-10 md:h-12 object-contain mb-3 grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-10 md:h-12 object-contain mb-3"
               />
               <p className="text-gray-700 text-sm md:text-base font-medium">
                 {platform.name}

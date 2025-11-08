@@ -14,13 +14,15 @@ const HeroSection = () => {
 
         </p>
         <div className="flex flex-col md:flex-row self-start  md:justify-start mt-6 md:ml-16 mb-8 gap-4">
-          <Link href={"/services"} className="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition duration-300 w-fit">
+          <Link href={"/services"} className="bg-gray-600 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300 w-fit">
             Learn More
           </Link>
-          <Link href={"https://calendly.com/chinedukingsley3030/30min"} className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300 w-fit">
+          <Link href={"https://calendly.com/chinedukingsley3030/30min"} className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 w-fit">
             Book A Consultation
           </Link>
         </div>
+
+        
       </div>
       <div className="flex-1 relative w-full h-[400px] overflow-hidden z-0">
         <video

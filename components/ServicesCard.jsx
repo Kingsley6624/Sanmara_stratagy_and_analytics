@@ -17,7 +17,7 @@ const ServicesCard = ({ icon, title, desc, index, isLast }) => {
   return (
     <motion.div
       key={index}
-      className={`bg-white p-8 rounded-lg shadow-sm flex flex-col items-center md:items-start text-center md:text-left transition-all`}
+      className={`bg-[#EFF6FF] p-8 rounded-lg shadow-sm flex flex-col items-center md:items-start text-center md:text-left transition-all`}
       variants={getVariant(index)}
       initial="hidden"
       whileInView="visible"
@@ -25,7 +25,7 @@ const ServicesCard = ({ icon, title, desc, index, isLast }) => {
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      <div className="rounded-full p-3 w-fit bg-[#EFF6FF] shadow-md mb-4 sm:mb-6 mx-auto md:mx-0">
+      <div className="rounded-full p-3 w-fit bg-white shadow-md mb-4 sm:mb-6 mx-auto md:mx-0">
         <img className="h-12" src={icon} alt={title} />
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
