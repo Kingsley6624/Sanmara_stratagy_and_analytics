@@ -7,11 +7,6 @@ import { usePathname } from "next/navigation";
 import ToggleMenu from "./ToggleMenu";
 import { useEffect, useState } from "react";
 
-
-  
-
-  
-
 const NavBar = () => {
   const pathname = usePathname();
 
@@ -27,24 +22,81 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const links = [
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/industries", label: "Industries" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact Us", isButton: true },
+  ];
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
           ? "bg-white shadow-md text-gray-800"
-          : "bg-blue-400 text-white"
+          : "bg-transparent text-white"
       }`}
     >
-
       <div className="max-w-7xl mx-auto px-[5%] py-2 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="">
-          <img src={scrolled ? "/logo.png" : "/white-logo.png"} alt="SanMara Logo" className="h-8 md:12 " />
+          <img
+            src={scrolled ? "/logo.png" : "/white-logo.png"}
+            alt="SanMara Logo"
+            className="h-8 md:12 "
+          />
         </Link>
 
         {/* Navigation Links */}
-        <ul className="space-x-6 text-sm font-medium  h-16 md:flex hidden">
-          <li>
+
+        <ul className="hidden md:flex space-x-6 font-medium text-sm h-16 items-center">
+          {links.map((link) => (
+            <li key={link.href}>
+              {link.isButton ? (
+                <Link
+                  href={link.href}
+                  className={`px-4 py-2 rounded-md border transition-colors duration-300 font-medium ${
+                    scrolled
+                      ? "bg-blue-600 text-white hover:bg-blue-900"
+                      : "bg-white text-blue-600 hover:bg-blue-100"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  href={link.href}
+                  className={`relative h-full flex items-center px-2 transition-all duration-300
+                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0  after:transition-all after:duration-300 hover:after:w-full
+                ${
+                  pathname === `/${link.label}`
+                    ? "after:w-full text-gray-800"
+                    : ""
+                }
+                ${
+                  scrolled
+                    ? "text-gray-800 hover:text-blue-900 after:bg-blue-900"
+                    : "text-white hover:text-blue-200 after:bg-blue-200"
+                }
+                    `}
+                >
+                  {link.label}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+        <ToggleMenu scrolled={scrolled} />
+      </div>
+    </nav>
+  );
+};
+
+export default NavBar;
+
+{
+  /* <li>
             <Link
               href="/about"
               className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
@@ -53,87 +105,5 @@ const NavBar = () => {
             >
               About
             </Link>
-          </li>
-          <li className="relative group">
-            <Link
-              href="/services"
-              className={`h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
-              after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full
-              ${pathname === "/services" ? "after:w-full text-blue-900" : ""}
-            `}>
-              Services
-              {/* <RiArrowDropDownLine className="inline" /> */}
-            </Link>
-            <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-50">
-              {/* <ul className="py-2 text-sm text-gray-700">
-                <li>
-                  <Link
-                    href="/services/consulting"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Consulting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/analytics"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Analytics
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/strategy"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Strategy
-                  </Link>
-                </li>
-              </ul> */}
-            </div>
-          </li>
-          <li>
-            <Link
-              href="/industries"
-              className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
-                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full
-                ${
-                  pathname === "/industries" ? "after:w-full text-blue-900" : ""
-                }
-              `}
-            >
-              Industries
-              {/* <RiArrowDropDownLine className="inline" /> */}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/blog"
-              className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
-                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full
-                ${pathname === "/blog" ? "after:w-full text-blue-900" : ""}
-              `}
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
-                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full
-                ${pathname === "/contact" ? "after:w-full text-blue-900" : ""}
-              `}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <ToggleMenu />
-      </div>
-    </nav>
-  );
-};
-
-export default NavBar;
+          </li> */
+}

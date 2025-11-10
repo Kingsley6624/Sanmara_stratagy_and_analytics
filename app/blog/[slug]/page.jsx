@@ -5,6 +5,7 @@ import path from "path";
 import Head from "next/head";
 import Image from "next/image";
 
+
 const BlogPage = async ({ params }) => {
   // Await params if it's a promise
   const resolvedParams = await params;

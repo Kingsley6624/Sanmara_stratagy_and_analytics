@@ -6,7 +6,7 @@ import { ul } from "framer-motion/client";
 const Footer = () => {
   
   return (
-    <section className="py-6 bg-gray-800 text-white px-[5%]">
+    <section className="py-6 bg-slate-900 text-white px-[5%]">
       <div className="flex flex-col md:flex-row mb-6 md:mb-12 justify-center md:justify-start items-center md:items-start">
         <div>
           <Link href="/">

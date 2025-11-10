@@ -2,6 +2,8 @@
   "title": "How Smart Businesses Turn Information into Strategic Advantage",
   "meta_description": "Learn how small businesses and data teams can transform everyday business information into actionable strategy. Discover how to build a data-driven culture, track performance through KPIs, and use analytics to create a lasting competitive advantage.",
   "cover_image": "/businessmen-table.jpg",
+  "author": "Ezenwafor christian",
+  "date": "October 26, 2025",
   "sections": [
     {
       "heading": "Introduction: From Information to Intelligence",
@@ -96,6 +98,6 @@
       "small business data insights"
     ],
     "slug": "how-smart-businesses-turn-information-into-strategic-advantage",
-    "reading_time": "6 minutes"
+    "reading_time": "6 min"
   }
 }

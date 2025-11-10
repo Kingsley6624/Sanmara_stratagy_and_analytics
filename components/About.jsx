@@ -1,4 +1,4 @@
-import React from "react";
+import PageHeader from "./pageHeader";
 
 const About = () => {
   return (

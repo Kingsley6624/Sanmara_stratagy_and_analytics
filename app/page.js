@@ -8,7 +8,7 @@ import PlatformsSection from '@/components/Platform'
 const HomePage = () => {
 
   return (
-<main className='bg-[#F5E9D3] mt-[3.1rem] md:mt-24 min-h-screen'>
+<main className='bg-[#F5E9D3] min-h-screen'>
   <HeroSection />
   <About />
   {/* <Approach /> */}

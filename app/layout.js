@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter, Poppins } from "next/font/google";
-import NavBar from "../components/NavBar";
+import NavBar from "@/components/NavBar";
 import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import NavigationWrapper from "../components/NavigationWrapper";
