@@ -44,7 +44,7 @@ const HeroSection = () => {
   }, [current, extendedSlides.length]);
 
   return (
-    <section className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
+    <section className="relative w-full h-60 sm:h-[500px] md:h-[600px] overflow-hidden">
       <div
         className={`flex h-full ${transitionEnabled ? "transition-transform duration-1000 ease-in-out" : ""}`}
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -57,7 +57,7 @@ const HeroSection = () => {
               alt={`Slide ${index + 1}`}
               fill
               priority={index === 0}
-              className="object-cover"
+              className="object-fill"
             />
           </div>
         ))}
