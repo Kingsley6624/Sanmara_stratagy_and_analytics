@@ -44,20 +44,20 @@ const HeroSection = () => {
   }, [current, extendedSlides.length]);
 
   return (
-    <section className="relative w-full h-60 sm:h-[500px] md:h-[600px] overflow-hidden rounded-tl-2xl">
+    <section className="relative w-full h-60 sm:h-[500px] md:h-[600px] overflow-hidden rounded-2xl">
       <div
         className={`flex h-full ${transitionEnabled ? "transition-transform duration-1000 ease-in-out" : ""}`}
         style={{ transform: `translateX(-${current * 100}%)` }}
         ref={slideRef}
       >
         {extendedSlides.map((slide, index) => (
-          <div key={index} className="min-w-full shrink-0 relative h-full rounded-tl-2xl">
+          <div key={index} className="min-w-full shrink-0 relative h-full rounded-2xl">
             <Image
               src={slide}
               alt={`Slide ${index + 1}`}
               fill
               priority={index === 0}
-              className="object-fill rounded-tl-2xl"
+              className="object-fill rounded-2xl"
             />
           </div>
         ))}

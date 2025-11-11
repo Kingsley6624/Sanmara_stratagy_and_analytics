@@ -27,15 +27,16 @@
   },
   {
     "id": 3,
-    "title": "Product valuation",
+    "title": "Corporate Finance",
     "desc": "We help startups and SMEs unlock value and make bold, data driven decisions that fuel growth.",
     "body": "We help startups and SMEs unlock value and make bold, data-driven decisions that fuel growth.",
     "icon": "/data-quality.png",
     "points": [
-      "Data visualization and reporting",
-      "Predictive analytics and modeling",
-      "KPI dashboards and performance metrics",
-      "Data infrastructure and integration advisory"
+      "Raising funds",
+      "Selling your business",
+      "Buying a business",
+      "Business valuation",
+      "Product valuation"
     ]
   },
   {
