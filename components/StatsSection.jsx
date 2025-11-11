@@ -5,8 +5,8 @@ const StatsSection = () => (
   <section className="bg-white py-12 sm:py-16">
     <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
       <StatCounter end={98} suffix="%" label="Customer Satisfaction" />
-      <StatCounter end={237} suffix="+" label="Successful Projects" />
-      <StatCounter end={12} label="Years of Experience" />
+      <StatCounter end={70} suffix="+" label="Successful Projects" />
+      <StatCounter end={2} label="Years of Experience" />
     </div>
   </section>
 );

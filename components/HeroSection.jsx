@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import HeroImages from "./HeroImages";
 
 const HeroSection = () => {
   return (
@@ -25,18 +26,8 @@ const HeroSection = () => {
         
       </div>
       <div className="flex-1 relative w-full h-[400px] overflow-hidden z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          className="flex-1 relative w-full h-[250px] sm:h-[350px] md:h-[400px] overflow-hidden object-cover md:rounded-l-2xl"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <HeroImages />
+        
       </div>
     </section>
   );
