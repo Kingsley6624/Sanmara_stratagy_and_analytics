@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "title": "Fraud Analytics & Risk Management",
+    "title": "Risk Management & Fraud Analytics",
     "desc": "We leverage advanced analytics to detect fraud patterns, enhance monitoring, and fortify organizational defenses.",
     "body": "Fraud erodes trust and profitability, we help you stay ahead of it. Our data-driven fraud analytics framework identifies suspicious patterns, enhances transaction monitoring, and strengthens fraud defense mechanisms.",
     "icon": "/risk-management.png",
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "title": "Data-Driven Business Intelligence",
+    "title": "Data Driven Business Intelligence",
     "desc": "we transforms raw data into strategic insights using analytics, dashboards, and AI-powered decisions.",
     "body": "We turn raw data into strategic insight. SanMara helps organizations leverage analytics, dashboards, and AI tools to make informed, real time decisions.",
     "icon": "/data-quality.png",

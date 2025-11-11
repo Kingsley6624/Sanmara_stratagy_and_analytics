@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import NavigationWrapper from "../components/NavigationWrapper";
+import WhatsAppButton from "@/components/WhatsApp";
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", });
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <SideBar />
         {children}
         </NavigationWrapper>
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

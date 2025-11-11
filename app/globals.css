@@ -5,7 +5,6 @@
   --font-body: var(--font-inter), system-ui, sans-serif;
 }
 
-/* Optional: apply globally */
 @layer base {
   body {
     @apply font-body text-gray-800;
@@ -15,3 +14,5 @@
     @apply font-heading;
   }
 }
+
+

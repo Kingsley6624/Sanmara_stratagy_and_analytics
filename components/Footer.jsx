@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Links from "../data/links.json"
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { ul } from "framer-motion/client";
 
 const Footer = () => {
@@ -54,6 +54,9 @@ const Footer = () => {
           </Link>
           <Link href="https://www.linkedin.com/">
             <FaLinkedinIn className="hover:text-blue-500 hover:scale-110 transition-transform duration-200" />
+          </Link>
+          <Link href="https://www.instagram.com/">
+            <FaInstagram className="hover:text-blue-500 hover:scale-110 transition-transform duration-200" />
           </Link>
         </div>
         <div className="container mx-auto text-center">
