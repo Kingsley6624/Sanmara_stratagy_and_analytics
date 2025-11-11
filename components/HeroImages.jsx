@@ -44,14 +44,14 @@ const HeroSection = () => {
   }, [current, extendedSlides.length]);
 
   return (
-    <section className="relative w-full h-[80vh] overflow-hidden">
+    <section className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
       <div
         className={`flex h-full ${transitionEnabled ? "transition-transform duration-1000 ease-in-out" : ""}`}
         style={{ transform: `translateX(-${current * 100}%)` }}
         ref={slideRef}
       >
         {extendedSlides.map((slide, index) => (
-          <div key={index} className="min-w-full relative h-full">
+          <div key={index} className="min-w-full shrink-0 relative h-full">
             <Image
               src={slide}
               alt={`Slide ${index + 1}`}
