@@ -14,7 +14,7 @@ const Services = async () => {
           designed to help you thrive in a data driven world.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 overflow-hidden">
           {services.map((service, i) => (
             <ServicesCard
               key={i}

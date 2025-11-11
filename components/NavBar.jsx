@@ -32,19 +32,19 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-500 ${
         scrolled
           ? "bg-white shadow-md text-gray-800"
           : "bg-transparent text-white"
       }`}
     >
-      <div className=" mx-auto px-4 py-2 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center overflow-hidden">
         {/* Logo */}
         <Link href="/" className="">
           <img
             src={scrolled ? "/logo.png" : "/white-logo.png"}
             alt="SanMara Logo"
-            className="h-8 md:12 "
+            className="h-8 md:h-12 "
           />
         </Link>
 
