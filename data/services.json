@@ -14,6 +14,31 @@
   },
   {
     "id": 2,
+    "title": "Data Driven Business Intelligence",
+    "desc": "we transforms raw data into strategic insights using analytics, dashboards, and AI-powered decisions.",
+    "body": "We turn raw data into strategic insight. SanMara helps organizations leverage analytics, dashboards, and AI tools to make informed, real time decisions.",
+    "icon": "/data-quality.png",
+    "points": [
+      "Data visualization and reporting",
+      "Predictive analytics and modeling",
+      "KPI dashboards and performance metrics",
+      "Data infrastructure and integration advisory"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Product valuation",
+    "body": "We help startups and SMEs unlock value and make bold, data-driven decisions that fuel growth.",
+    "icon": "/data-quality.png",
+    "points": [
+      "Data visualization and reporting",
+      "Predictive analytics and modeling",
+      "KPI dashboards and performance metrics",
+      "Data infrastructure and integration advisory"
+    ]
+  },
+  {
+    "id": 4,
     "title": "Financial & Strategic Consulting",
     "desc": "Partnering with businesses to align financial performance with strategy, ensuring every decision drives value.",
     "body": "We partner with businesses to align financial performance with long term strategy. From forecasting and cost analysis to capital strategy and business transformation, we ensure that every decision adds value.",
@@ -26,7 +51,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Risk Management & Fraud Analytics",
     "desc": "We leverage advanced analytics to detect fraud patterns, enhance monitoring, and fortify organizational defenses.",
     "body": "Fraud erodes trust and profitability, we help you stay ahead of it. Our data-driven fraud analytics framework identifies suspicious patterns, enhances transaction monitoring, and strengthens fraud defense mechanisms.",
@@ -36,19 +61,6 @@
       "Risk scoring and behavior analysis",
       "Compliance and risk advisory",
       "Transaction pattern analytics"
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Data Driven Business Intelligence",
-    "desc": "we transforms raw data into strategic insights using analytics, dashboards, and AI-powered decisions.",
-    "body": "We turn raw data into strategic insight. SanMara helps organizations leverage analytics, dashboards, and AI tools to make informed, real time decisions.",
-    "icon": "/data-quality.png",
-    "points": [
-      "Data visualization and reporting",
-      "Predictive analytics and modeling",
-      "KPI dashboards and performance metrics",
-      "Data infrastructure and integration advisory"
     ]
   }
 ]

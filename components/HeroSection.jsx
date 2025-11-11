@@ -13,7 +13,7 @@ const HeroSection = () => {
           We specialize in business research, financial strategy, fraud analytics, and data intelligence helping organizations turn complex information into actionable insights that drive growth, reduce risk, and improve performance.
 
         </p>
-        <div className="flex flex-wrap md:flex-row  md:justify-start mt-6  mb-8 gap-4">
+        <div className="flex flex-wrap md:flex-row  md:justify-start  mt-6  mb-8 gap-4">
           <Link href={"/services"} className="bg-gray-600 text-white px-3  md:px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300 w-fit text-nowrap">
             Learn More
           </Link>

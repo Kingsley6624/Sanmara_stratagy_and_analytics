@@ -38,7 +38,7 @@ const NavBar = () => {
           : "bg-transparent text-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center overflow-hidden">
+      <div className="mx-auto px-4 py-2 flex justify-between items-center overflow-hidden">
         {/* Logo */}
         <Link href="/" className="">
           <img
