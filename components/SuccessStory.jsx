@@ -22,7 +22,7 @@ const pillars = [
     title: "Jufrem Investment Limited",
     description:
       "Designed a smart data and reporting system that empowered Jufrem to make informed decisions and boost efficiency in the auto parts industry.",
-    href: "/services",
+    href: "/services/",
   },
 ];
 
@@ -49,17 +49,17 @@ const SuccessStory = () => {
             >
               {/* Logo */}
               {pillar.logo && (
-                <div className=" mb-5 flex items-center justify-center overflow-hidden w-full">
+                <div className=" mb-5 flex items-center justify-center overflow-hidden">
                   <img
                     src={pillar.logo}
                     alt={pillar.title}
-                    className=" h-32 w-full"
+                    className="object-contain h-28 md:h-32 w-full"
                   />
                 </div>
               )}
 
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-3 text-[#1E2A38]">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 text-[#1E2A38]">
                 {pillar.title}
               </h3>
 
