@@ -43,13 +43,13 @@ const BlogPage = async ({ params }) => {
           </div>
         )}
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
-        <p className="text-gray-600 text-base sm:text-lg mb-8">{post.meta_description}</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-4">{post.title}</h1>
+        <p className="text-gray-600 text-sm md:text-base mb-8">{post.meta_description}</p>
 
         {post.sections?.map((section, i) => (
           <section key={i} className="mb-12">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">{section.heading}</h2>
-            {section.content && <p className="text-gray-700 mb-4">{section.content}</p>}
+            <h2 className="text-xl md:text-2xl font-semibold mb-4">{section.heading}</h2>
+            {section.content && <p className="text-gray-700 mb-4 text-sm md:text-base">{section.content}</p>}
             {section.image && (
               <div className="relative w-full h-48 sm:h-56 md:h-64 mb-6 rounded-lg overflow-hidden">
                 <Image src={section.image} alt={section.heading} fill className="object-cover" />
@@ -76,14 +76,14 @@ const BlogPage = async ({ params }) => {
                 ))}
               </ul>
             )}
-            {section.note && <p className="italic mt-2">{section.note}</p>}
-            {section.closing && <p className="font-medium mt-2">{section.closing}</p>}
+            {section.note && <p className="italic mt-2 text-sm md:text-base">{section.note}</p>}
+            {section.closing && <p className="font-medium mt-2 text-sm md:text-base">{section.closing}</p>}
           </section>
         ))}
 
         {post.call_to_action && (
           <div className="mt-12 bg-blue-50 border border-blue-100 p-6 rounded-xl text-center">
-            <p className="text-lg sm:text-xl mb-2">{post.call_to_action.text}</p>
+            <p className="text-base md:text-base mb-2">{post.call_to_action.text}</p>
             <a href={post.call_to_action.link} className="text-blue-600 font-semibold underline">
               Learn More →
             </a>

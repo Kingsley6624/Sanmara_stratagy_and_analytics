@@ -11,18 +11,18 @@ const pillars = [
     href: "https://www.weafriq.net/",
   },
   {
-    logo: "/customers/weafriq.png",
+    logo: "/customers/justinandbro.png",
     title: "Justin and Bros",
     description:
       "Built a predictive analytics system to enhance fraud detection and reduce financial risk across their digital finance operations.",
-    href: "/services/consulting",
+    href: "/services",
   },
   {
-    logo: "/customers/weafriq.png",
+    logo: "/customers/jufrem.png",
     title: "Jufrem Investment Limited",
     description:
       "Designed a smart data and reporting system that empowered Jufrem to make informed decisions and boost efficiency in the auto parts industry.",
-    href: "/services/market-intelligence",
+    href: "/services",
   },
 ];
 
@@ -49,11 +49,11 @@ const SuccessStory = () => {
             >
               {/* Logo */}
               {pillar.logo && (
-                <div className=" mb-5 flex items-center justify-center overflow-hidden">
+                <div className=" mb-5 flex items-center justify-center overflow-hidden w-full">
                   <img
                     src={pillar.logo}
                     alt={pillar.title}
-                    className=" object-contain"
+                    className=" h-32 w-full"
                   />
                 </div>
               )}

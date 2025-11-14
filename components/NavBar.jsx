@@ -13,14 +13,23 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    // Disable scroll effect on single blog pages
+    if (pathname.startsWith("/blog/")) return;
+
     const handleScroll = () => {
-      // Trigger color change after scrolling 50px
       setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  const isBlogPage = pathname.startsWith("/blog/");
+  const navbarBgClass = isBlogPage
+    ? "bg-white text-gray-800 shadow-md"
+    : scrolled
+    ? "bg-white text-gray-800 shadow-md"
+    : "bg-transparent text-white";
 
   const links = [
     { href: "/about", label: "About" },
@@ -32,17 +41,19 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white shadow-md text-gray-800"
-          : "bg-transparent text-white"
-      }`}
+      className={`fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-500 ${navbarBgClass}`}
     >
       <div className="mx-auto px-4 py-2 flex justify-between items-center overflow-hidden">
         {/* Logo */}
         <Link href="/" className="">
           <img
-            src={scrolled ? "/logo.png" : "/white-logo.png"}
+            src={
+              isBlogPage
+                ? "/logo.png"
+                : scrolled
+                ? "/logo.png"
+                : "/white-logo.png"
+            }
             alt="SanMara Logo"
             className="h-8 md:h-12 "
           />
@@ -57,7 +68,9 @@ const NavBar = () => {
                 <Link
                   href={link.href}
                   className={`px-4 py-2 rounded-md border transition-colors duration-300 font-medium ${
-                    scrolled
+                    isBlogPage
+                      ? "bg-blue-600 text-white hover:bg-blue-900"
+                      : scrolled
                       ? "bg-blue-600 text-white hover:bg-blue-900"
                       : "bg-white text-blue-600 hover:bg-blue-100"
                   }`}
@@ -75,7 +88,9 @@ const NavBar = () => {
                     : ""
                 }
                 ${
-                  scrolled
+                  isBlogPage
+                    ? "text-gray-800 hover:text-blue-900 after:bg-blue-900"
+                    : scrolled
                     ? "text-gray-800 hover:text-blue-900 after:bg-blue-900"
                     : "text-white hover:text-blue-200 after:bg-blue-200"
                 }
@@ -94,16 +109,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-{
-  /* <li>
-            <Link
-              href="/about"
-              className={`relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900
-                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-900 after:transition-all after:duration-300 hover:after:w-full
-                ${pathname === "/about" ? "after:w-full text-blue-900" : ""}`}
-            >
-              About
-            </Link>
-          </li> */
-}
