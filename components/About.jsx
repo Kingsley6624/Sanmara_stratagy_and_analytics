@@ -9,12 +9,7 @@ const About = () => {
           Who We Are
         </h2>
         <p className="text-gray-700 leading-relaxed ">
-          Sanmara Strategy and Analytics is an international consulting firm
-          committed to empowering organizations with data driven strategies and
-          actionable intelligence. We combine business expertise, advanced
-          analytics, and risk management experience to help clients
-          navigate uncertainty, improve decision making, and sustain competitive
-          advantage.
+          We combine business expertise, advanced analytics, and risk management experience to help organisations navigate uncertainty, improve decision making, and sustain competitive advantage.
         </p>
       </div>
     </section>

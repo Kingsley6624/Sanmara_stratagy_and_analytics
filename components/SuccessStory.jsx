@@ -53,7 +53,7 @@ const SuccessStory = () => {
                   <img
                     src={pillar.logo}
                     alt={pillar.title}
-                    className="object-contain h-28 md:h-32 w-full"
+                    className="object-contain w-full  h-28 md:h-32"
                   />
                 </div>
               )}
