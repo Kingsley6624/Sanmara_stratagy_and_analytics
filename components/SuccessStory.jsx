@@ -49,11 +49,11 @@ const SuccessStory = () => {
             >
               {/* Logo */}
               {pillar.logo && (
-                <div className=" mb-5 flex items-center justify-center overflow-hidden">
+                <div className={` ${index === 0 ? "h-10 md:h-14"  : "h-28 md:h-32"}  flex items-center justify-center `}>
                   <img
                     src={pillar.logo}
                     alt={pillar.title}
-                    className="object-contain w-full  h-28 md:h-32"
+                    className="object-contain max-h-full"
                   />
                 </div>
               )}

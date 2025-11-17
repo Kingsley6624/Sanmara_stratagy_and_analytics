@@ -5,6 +5,7 @@ import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import NavigationWrapper from "../components/NavigationWrapper";
 import WhatsAppButton from "@/components/WhatsApp";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", });
@@ -16,7 +17,7 @@ export const metadata = {
   description: "Discover how SanMara empowers businesses with data-driven strategies, market research, financial consulting, and fraud analytics.",
   robots: "index, follow",
   alternates: {
-    canonical: "https://sanmarastratagyandanalytics.vercel.app/",
+    canonical: "https://sanmaraconsulting.com/",
   },
 };
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.className} ${poppins.className}`}>
       <body>
+        <ScrollToTop>
         <NavigationWrapper>
         <NavBar />
         <SideBar />
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
         </NavigationWrapper>
         <WhatsAppButton />
         <Footer />
+        </ScrollToTop>
       </body>
     </html>
   );
