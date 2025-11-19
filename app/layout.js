@@ -22,17 +22,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+   const noFooter = children?.props?.['data-no-footer'];
   return (
     <html lang="en" className={`${inter.className} ${poppins.className}`}>
       <body>
         <ScrollToTop>
         <NavigationWrapper>
-        <NavBar />
+          <NavBar />
+        
         <SideBar />
         {children}
         </NavigationWrapper>
         <WhatsAppButton />
-        <Footer />
+        {!noFooter && <Footer />}
+        
         </ScrollToTop>
       </body>
     </html>

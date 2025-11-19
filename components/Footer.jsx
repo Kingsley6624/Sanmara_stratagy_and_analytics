@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row mb-6 md:mb-12 justify-center md:justify-start items-center md:items-start">
         <div>
           <Link href="/">
-          <img src="/white-logo.png" alt="SanMara Logo" className="h-8 md:h-12" />
+          <img src="/white-logo.png" alt="SanMara Logo" className="h-12 md:h-14" />
         </Link>
         </div>
         <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4 mt-4 md:mt-0 md:ml-20 space-y-2 md:space-y-0">

@@ -55,7 +55,7 @@ const NavBar = () => {
                 : "/white-logo.png"
             }
             alt="SanMara Logo"
-            className="h-8 md:h-12 "
+            className="h-12 md:h-14"
           />
         </Link>
 
