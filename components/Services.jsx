@@ -6,7 +6,7 @@ const Services = async () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1E2A38] mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
           Our Core Services
         </h2>
         <p className="text-gray-700 mb-8 text-lg">

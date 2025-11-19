@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import HeroImages from "./HeroImages";
+import { FaArrowRight } from "react-icons/fa6";
 
 const HeroSection = () => {
   return (
@@ -15,11 +16,13 @@ const HeroSection = () => {
 
         </p>
         <div className="flex flex-wrap md:flex-row  md:justify-start  mt-6  mb-8 gap-4">
-          <Link href={"/services"} className="bg-gray-600 text-white px-3  md:px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300 w-fit text-nowrap">
+          <Link href={"/services"} className="flex items-center gap-2 bg-gray-600 text-white px-3  md:px-6 py-2 rounded hover:bg-gray-700 transition duration-300 w-fit text-nowrap">
             Learn More
+            <FaArrowRight />
           </Link>
-          <Link href={"https://calendly.com/chinedukingsley3030/30min"} className="bg-blue-600 text-white px-3 md:px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 w-fit  text-nowrap">
+          <Link href={"https://calendly.com/chinedukingsley3030/30min"} className="flex items-center gap-2 bg-blue-600 text-white px-3 md:px-6 py-2 rounded-sm hover:bg-blue-700 transition duration-300 w-fit  text-nowrap">
             Book A Consultation
+            <FaArrowRight />
           </Link>
         </div>
 

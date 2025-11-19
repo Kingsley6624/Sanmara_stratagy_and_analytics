@@ -17,7 +17,7 @@ export default function PlatformsScroll() {
   return (
     <section className="bg-white py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center mb-8 px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
           Platforms We Work With
         </h2>
       </div>
