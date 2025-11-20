@@ -11,19 +11,20 @@ const HeroSection = () => {
           Accelerate Your Business Growth Through Research And <span className="text-[#f6c23e]">Data
           Driven Insights.</span> 
         </h1>
-        <p className=" md:text-left mt-4">
+        <p className=" md:text-left mt-4 text-start">
           We specialize in business research, financial strategy, fraud analytics, and data intelligence helping organizations turn complex information into actionable insights that drive growth, reduce risk, and improve performance.
 
         </p>
-        <div className="flex flex-wrap md:flex-row  md:justify-start  mt-6  mb-8 gap-4">
-          <Link href={"/services"} className="flex items-center gap-2 bg-gray-600 text-white px-3  md:px-6 py-2 rounded hover:bg-gray-700 transition duration-300 w-fit text-nowrap">
-            Learn More
-            <FaArrowRight />
-          </Link>
+        <div className="flex flex-row flex-wrap  md:justify-start  mt-6  mb-8 gap-4">
           <Link href={"https://calendly.com/chinedukingsley3030/30min"} className="flex items-center gap-2 bg-blue-600 text-white px-3 md:px-6 py-2 rounded-sm hover:bg-blue-700 transition duration-300 w-fit  text-nowrap">
             Book A Consultation
             <FaArrowRight />
           </Link>
+          <Link href={"/services"} className="flex items-center gap-2 bg-gray-600 text-white px-3  md:px-6 py-2 rounded hover:bg-gray-700 transition duration-300 w-fit text-nowrap">
+            Learn More
+            <FaArrowRight />
+          </Link>
+          
         </div>
 
         
