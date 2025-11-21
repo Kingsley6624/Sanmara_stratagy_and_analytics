@@ -30,8 +30,9 @@ export default function ContactForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="max-w-xl space-y-6 text-start">
+      <form onSubmit={handleSubmit} className="space-y-6 text-start shadow-md p-6 md:rounded-2xl">
         <div>
+          <h3 className="mb-4 text-lg font-semibold">Send us a message</h3>
           <label className="block text-sm font-medium text-gray-700">Name</label>
           <input
             type="text"

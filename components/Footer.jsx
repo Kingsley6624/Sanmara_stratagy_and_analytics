@@ -38,7 +38,7 @@ const Footer = () => {
                   >
                     {Icon && <Icon className="mr-2" />}
                     {sublink.href ? (
-                      <Link href={sublink.href} className="hover:text-white">
+                      <Link href={sublink.href} className="hover:text-[#f6c23e]">
                         {sublink.title || sublink.address}
                       </Link>
                     ) : (
@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="flex justify-center">
           <p className="text-nowrap">Terms & Conditions</p>
           <span className="mx-2">|</span>
-          <Link className="text-nowrap" href="/privacy">
+          <Link className="text-nowrap hover:text-[#f6c23e]" href="/privacy">
             Privacy Policy
           </Link>
         </div>
@@ -71,16 +71,16 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex justify-center  space-x-4 text-xl 2xl:text-4xl">
           <Link href="https://www.facebook.com/" aria-label="Facebook">
-            <FaFacebookF className="hover:text-blue-500 hover:scale-110 transition-transform duration-200" />
+            <FaFacebookF className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
           </Link>
           <Link href="https://twitter.com/" aria-label="Twitter">
-            <FaTwitter className="hover:text-blue-500 hover:scale-110 transition-transform duration-200" />
+            <FaTwitter className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
           </Link>
           <Link href="https://www.linkedin.com/" aria-label="LinkedIn">
-            <FaLinkedinIn className="hover:text-blue-500 hover:scale-110 transition-transform duration-200" />
+            <FaLinkedinIn className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
           </Link>
           <Link href="https://www.instagram.com/" aria-label="Instagram">
-            <FaInstagram className="hover:text-blue-500 hover:scale-110 transition-transform duration-200" />
+            <FaInstagram className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
           </Link>
         </div>
 
