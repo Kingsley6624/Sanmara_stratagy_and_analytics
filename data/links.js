@@ -1,7 +1,10 @@
-import { FaEnvelope, FaPhone, FaLocationDot } from "react-icons/fa6";
+import { FaEnvelope, FaPhone, FaLocationDot, FaFacebookF, FaXTwitter,
+  FaLinkedinIn,
+  FaInstagram, } from "react-icons/fa6";
 
-export const footerData = [
-  {
+export const footerData = {
+  "footerLinks" : [
+   {
     "id": 1,
     "category": "Services",
     "links": [
@@ -88,4 +91,25 @@ export const footerData = [
       
     ]
   }
-]
+  ],
+
+  "socials": [
+      {
+        "href": "https://www.facebook.com/share/1YPhjxYpCd/",
+        "icon": FaFacebookF
+      },
+      {
+        "href": "https://twitter.com/sanmaraconsulting",
+        "icon": FaXTwitter
+      },
+      {
+        "href": "https://www.linkedin.com/company/sanmaraconsulting/", 
+        "icon": FaLinkedinIn
+      },
+      {
+      
+        "href": "https://www.instagram.com/sanmara_consultation?igsh=YzljYTk1ODg3Zg==", 
+        "icon": FaInstagram
+      }
+    ]
+  }

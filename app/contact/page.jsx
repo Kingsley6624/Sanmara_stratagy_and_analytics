@@ -3,12 +3,6 @@ import ContactForm from "../../components/ContactForm";
 import PageHeader from "@/components/pageHeader";
 import Link from "next/link";
 import { ContactLinks } from "@/data/ContactLinks";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
 import { li } from "framer-motion/client";
 
 const ContactPage = () => {
@@ -32,7 +26,7 @@ const ContactPage = () => {
               Other Contact Channels
             </h3>
             <ul>
-              {ContactLinks.map((link, index) => {
+              {ContactLinks.contact.map((link, index) => {
                 const Icon = link.icon;
                 return (
                   <li
@@ -41,7 +35,12 @@ const ContactPage = () => {
                   >
                     {Icon && <Icon className="mr-2" />}
                     {link.href ? (
-                      <Link href={link.href} className="hover:text-[#f6c23e]">
+                      <Link
+                        href={link.href}
+                        className="hover:text-[#f6c23e]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {link.title || link.address}
                       </Link>
                     ) : (
@@ -54,19 +53,21 @@ const ContactPage = () => {
 
             <hr className="border-gray-400 w-full mx-auto" />
 
-            <div className="flex  space-x-4 text-xl 2xl:text-4xl ">
-              <Link href="https://www.facebook.com/" aria-label="Facebook">
-                <FaFacebookF className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-              </Link>
-              <Link href="https://twitter.com/" aria-label="Twitter">
-                <FaTwitter className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-              </Link>
-              <Link href="https://www.linkedin.com/" aria-label="LinkedIn">
-                <FaLinkedinIn className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-              </Link>
-              <Link href="https://www.instagram.com/" aria-label="Instagram">
-                <FaInstagram className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-              </Link>
+            <div className="flex  space-x-5 text-xl 2xl:text-4xl ">
+              {ContactLinks.socials.map((link, index) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    href={link.href}
+                    key={index}
+                    aria-label={link.name || "Social Media Link"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

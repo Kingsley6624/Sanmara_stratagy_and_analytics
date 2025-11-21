@@ -33,7 +33,7 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6 text-start shadow-md p-6 md:rounded-2xl">
         <div>
           <h3 className="mb-4 text-lg font-semibold">Send us a message</h3>
-          <label className="block text-sm font-medium text-gray-700">Name</label>
+          <label className="block text-sm font-medium text-gray-700">Name*</label>
           <input
             type="text"
             name="name"
@@ -43,7 +43,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Email</label>
+          <label className="block text-sm font-medium text-gray-700">Email*</label>
           <input
             type="email"
             name="email"
@@ -53,7 +53,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Message</label>
+          <label className="block text-sm font-medium text-gray-700">Message*</label>
           <textarea
             name="message"
             value={form.message}

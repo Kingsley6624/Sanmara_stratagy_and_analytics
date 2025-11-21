@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { footerData } from "../data/links";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -25,7 +20,7 @@ const Footer = () => {
 
         {/* Footer Links */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[auto_auto_auto_auto] gap-4 w-full mt-4 md:mt-0 md:ml-20 justify-between">
-          {footerData.map((section) => (
+          {footerData.footerLinks.map((section) => (
             <ul key={section.id} className="w-fit">
               <li className="font-bold mb-2 text-base">{section.category}</li>
 
@@ -38,7 +33,12 @@ const Footer = () => {
                   >
                     {Icon && <Icon className="mr-2" />}
                     {sublink.href ? (
-                      <Link href={sublink.href} className="hover:text-[#f6c23e]">
+                      <Link
+                        href={sublink.href}
+                        className="hover:text-[#f6c23e]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {sublink.title || sublink.address}
                       </Link>
                     ) : (
@@ -69,19 +69,21 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-center  space-x-4 text-xl 2xl:text-4xl">
-          <Link href="https://www.facebook.com/" aria-label="Facebook">
-            <FaFacebookF className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-          </Link>
-          <Link href="https://twitter.com/" aria-label="Twitter">
-            <FaTwitter className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-          </Link>
-          <Link href="https://www.linkedin.com/" aria-label="LinkedIn">
-            <FaLinkedinIn className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-          </Link>
-          <Link href="https://www.instagram.com/" aria-label="Instagram">
-            <FaInstagram className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
-          </Link>
+        <div className="flex justify-center space-x-5 text-xl 2xl:text-4xl ">
+          {footerData.socials.map((link, index) => {
+            const Icon = link.icon;
+            return (
+              <Link
+                href={link.href}
+                key={index}
+                aria-label={link.name || "Social Media Link"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon className="hover:text-[#f6c23e] hover:scale-110 transition-transform duration-200" />
+              </Link>
+            );
+          })}
         </div>
 
         {/* Copyright */}
