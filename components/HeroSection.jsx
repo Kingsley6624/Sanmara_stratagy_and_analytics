@@ -11,7 +11,7 @@ const HeroSection = () => {
           Accelerate Your Business Growth Through Research And <span className="text-[#f6c23e]">Data
           Driven Insights.</span> 
         </h1>
-        <p className=" md:text-left mt-4 text-start">
+        <p className=" md:text-left mt-4 text-start ">
           We specialize in business research, financial strategy, fraud analytics, and data intelligence helping organizations turn complex information into actionable insights that drive growth, reduce risk, and improve performance.
 
         </p>

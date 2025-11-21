@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="text-center text-white flex flex-col md:flex-row gap-4 mt-6 md:mt-12 font-extralight justify-center ">
+      <div className="text-center text-white flex flex-col md:flex-row gap-4 mt-6 md:mt-12 font-extralight justify-between text-sm md:text-base">
         {/* Terms & Privacy */}
         <div className="flex justify-center">
           <p className="text-nowrap">Terms & Conditions</p>

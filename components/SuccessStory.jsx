@@ -34,7 +34,7 @@ const SuccessStory = () => {
         <h2 className="text-3xl md:text-4xl text-blue-900 font-bold mb-4">
           Our Success Story
         </h2>
-        <p className="text-gray-700 mb-8 text-lg">
+        <p className="text-gray-700   mb-8 md:text-lg">
           At SanMara, our success is defined by the impact we create for our
           clients. Each partnership tells a story of transformation, growth, and
           innovation driven by data and insight.

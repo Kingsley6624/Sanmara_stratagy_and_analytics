@@ -9,12 +9,12 @@ const Services = async () => {
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
           Our Core Services
         </h2>
-        <p className="text-gray-700 mb-8 text-lg">
+        <p className="text-gray-700 mb-8 md:text-lg">
           At Sanmara, our services are built around four strategic pillars
           designed to help you thrive in a data driven world.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 overflow-hidden">
           {services.map((service, i) => (
             <ServicesCard
               key={i}

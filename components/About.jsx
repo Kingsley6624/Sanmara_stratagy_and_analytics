@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 text-center">
           Who We Are
         </h2>
-        <p className="text-gray-700 leading-relaxed ">
+        <p className="text-gray-700 leading-relaxed  text-sm md:text-base">
           We combine business expertise, advanced analytics, and risk management experience to help organisations navigate uncertainty, improve decision making, and sustain competitive advantage.
         </p>
       </div>

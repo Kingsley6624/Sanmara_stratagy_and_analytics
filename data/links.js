@@ -77,7 +77,7 @@ export const footerData = [
         "icon": FaLocationDot
       },
       {
-        "address": "12025 Richmond Ave Houston Texas 77082",
+        "address": "Houston Texas 77082",
         "icon": FaLocationDot
       },
       {

@@ -17,7 +17,7 @@ const ServicesCard = ({ icon, title, desc, index }) => {
   return (
     <motion.div
       key={index}
-      className="w-full max-w-full bg-[#EFF6FF] p-4 sm:p-6 md:p-8 rounded-lg shadow-sm 
+      className="w-full max-w-full bg-[#EFF6FF] p-4 rounded-lg shadow-sm 
       flex flex-col items-center md:items-start text-center md:text-left overflow-hidden"
       variants={getVariant(index)}
       initial="hidden"
@@ -26,11 +26,11 @@ const ServicesCard = ({ icon, title, desc, index }) => {
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      <div className="rounded-full p-3 w-fit bg-white shadow-md mb-4 sm:mb-6 mx-auto md:mx-0">
+      <div className="rounded-full p-2 w-fit bg-white shadow-md mb-4 sm:mb-6 mx-auto md:mx-0">
         <img className="h-12 w-12 object-contain" src={icon} alt={title} />
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-600">{desc}</p>
+      <p className="text-gray-600 text-sm md:text-base">{desc}</p>
     </motion.div>
   );
 };
