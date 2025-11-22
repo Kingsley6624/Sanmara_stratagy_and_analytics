@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
@@ -23,17 +23,35 @@ export default function ContactForm() {
       toast.error("Please enter a valid email address.");
       return;
     }
-
-    toast.success("Message sent successfully!");
-    setForm({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        toast.error(data.error || "Something went wrong");
+        return;
+      }
+      toast.success("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast.error("Failed to send message.");
+    }
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="space-y-6 text-start shadow-md p-6 md:rounded-2xl">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6 text-start shadow-md p-6 md:rounded-2xl"
+      >
         <div>
           <h3 className="mb-4 text-lg font-semibold">Send us a message</h3>
-          <label className="block text-sm font-medium text-gray-700">Name*</label>
+          <label className="block text-sm font-medium text-gray-700">
+            Name*
+          </label>
           <input
             type="text"
             name="name"
@@ -43,7 +61,9 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Email*</label>
+          <label className="block text-sm font-medium text-gray-700">
+            Email*
+          </label>
           <input
             type="email"
             name="email"
@@ -53,7 +73,9 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Message*</label>
+          <label className="block text-sm font-medium text-gray-700">
+            Message*
+          </label>
           <textarea
             name="message"
             value={form.message}
