@@ -62,9 +62,9 @@ const BlogPage = async ({ params }) => {
         )}
 
         {/* <h1 className="text-2xl md:text-3xl font-bold mb-4">{post.title}</h1> */}
-        <section className="text-gray-900 text-sm md:text-base mb-8">
-          {post.introduction}
-        </section>
+        <section className="mb-8 text-gray-700 text-lg leading-relaxed">
+        {post.introduction}
+      </section>
 
         {/* Sections */}
         {post.sections.map((section, idx) => (
