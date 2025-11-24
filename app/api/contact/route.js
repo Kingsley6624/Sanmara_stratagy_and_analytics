@@ -25,7 +25,6 @@ export async function POST(req) {
     // 💡 Check HTTP status code from Apps Script first
     if (response.status !== 200) {
         console.error("Apps Script returned non-200 status:", response.status);
-        // You can read the body here for more detailed error logging if needed
         return new Response(JSON.stringify({ error: "External service error (Google Script non-200)" }), { status: 502 });
     }
 

@@ -17,11 +17,11 @@ export default async function BlogListPage() {
       fs.readFileSync(path.join(blogsDir, file), "utf-8")
     );
     return {
-      slug: content.seo.slug,
+      slug: content.slug,
       title: content.title,
       description: content.meta_description,
       cover_image: content.cover_image,
-      reading_time: content.seo.reading_time,
+      reading_time: content.reading_time,
       author: content.author,
       date: content.date,
     };
