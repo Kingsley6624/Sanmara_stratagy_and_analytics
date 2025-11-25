@@ -29,7 +29,7 @@ const Footer = () => {
                 return (
                   <li
                     key={i}
-                    className="mb-1 text-gray-400 text-sm flex items-center"
+                    className="mb-2 text-gray-400 text-sm flex items-center"
                   >
                     {Icon && <Icon className="mr-2" />}
                     {sublink.href ? (
