@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const getVariant = (index) => {
   const direction = index % 2 === 0 ? -50 : 50;
@@ -13,8 +14,9 @@ const getVariant = (index) => {
   };
 };
 
-const ServicesCard = ({ icon, title, desc, index }) => {
+const ServicesCard = ({ icon, title, desc, index, href }) => {
   return (
+    <Link href={href || "#"}> 
     <motion.div
       key={index}
       className="w-full max-w-full bg-[#EFF6FF] p-4 rounded-lg shadow-sm 
@@ -32,6 +34,7 @@ const ServicesCard = ({ icon, title, desc, index }) => {
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-gray-600 text-sm md:text-base">{desc}</p>
     </motion.div>
+    </Link>
   );
 };
 
