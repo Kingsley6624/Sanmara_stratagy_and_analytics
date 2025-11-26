@@ -1,33 +1,40 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { usePathname } from "next/navigation";
 import ToggleMenu from "./ToggleMenu";
-import { useEffect, useState } from "react";
+
 
 const NavBar = () => {
   const pathname = usePathname();
-
   const [scrolled, setScrolled] = useState(false);
+  const isNotFoundPage = pathname === "/404";
 
+
+
+
+  const isSingleBlogPage =
+    pathname.startsWith("/blog/") && pathname !== "/blog";
+  const isScrollEnabled = !isSingleBlogPage && !isNotFoundPage;
+
+
+  const isWhiteNavbar = isNotFoundPage || scrolled || isSingleBlogPage;
+
+
+  // Scroll listener
   useEffect(() => {
-    // Disable scroll effect on single blog pages
-    if (pathname.startsWith("/blog/")) return;
-
+    if (!isScrollEnabled) return;
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+  }, [isScrollEnabled]);
 
-  const isBlogPage = pathname.startsWith("/blog/");
-  const navbarBgClass = isBlogPage
-    ? "bg-white text-gray-800 shadow-md"
-    : scrolled
+  // Navbar background class
+  const navbarBgClass = isWhiteNavbar
     ? "bg-white text-gray-800 shadow-md"
     : "bg-transparent text-white";
 
@@ -41,36 +48,27 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-500 ${navbarBgClass}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${navbarBgClass}`}
     >
-      <div className="mx-auto px-4 py-2 flex justify-between items-center overflow-hidden">
+      <div className="mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="">
+        <Link href="/">
           <img
-            src={
-              isBlogPage
-                ? "/logo.png"
-                : scrolled
-                ? "/logo.png"
-                : "/white-logo.png"
-            }
+            src={isWhiteNavbar ? "/logo.png" : "/white-logo.png"}
             alt="SanMara Logo"
             className="h-12 md:h-14"
           />
         </Link>
 
-        {/* Navigation Links */}
-
+        {/* Desktop Links */}
         <ul className="hidden md:flex space-x-6 font-medium text-sm h-16 items-center">
           {links.map((link) => (
-            <li key={link.href}>
+<li key={link.href}>
               {link.isButton ? (
                 <Link
                   href={link.href}
                   className={`px-4 py-2 rounded-md border transition-colors duration-300 font-medium ${
-                    isBlogPage
-                      ? "bg-blue-600 text-white hover:bg-blue-900"
-                      : scrolled
+                    isWhiteNavbar
                       ? "bg-blue-600 text-white hover:bg-blue-900"
                       : "bg-white text-blue-600 hover:bg-blue-100"
                   }`}
@@ -80,21 +78,15 @@ const NavBar = () => {
               ) : (
                 <Link
                   href={link.href}
-                  className={`relative h-full flex items-center px-2 transition-all duration-300
-                after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0  after:transition-all after:duration-300 hover:after:w-full
-                ${
-                  pathname === `/${link.label}`
-                    ? "after:w-full text-gray-800"
-                    : ""
-                }
-                ${
-                  isBlogPage
-                    ? "text-gray-800 hover:text-blue-900 after:bg-blue-900"
-                    : scrolled
-                    ? "text-gray-800 hover:text-blue-900 after:bg-blue-900"
-                    : "text-white hover:text-blue-200 after:bg-blue-200"
-                }
-                    `}
+                  cl            assName={`relative flex items-center px-2 transition-all duration-300 
+                    after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:transition-all 
+                    hover:after:w-full
+                    ${
+                      isWhiteNavbar
+                        ? "text-gray-800 hover:text-blue-900 after:bg-blue-900"
+                        : "text-white hover:text-blue-200 after:bg-blue-200"
+                    }
+                  `}
                 >
                   {link.label}
                 </Link>
@@ -102,7 +94,8 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <ToggleMenu scrolled={scrolled} />
+
+        <ToggleMenu scrolled={isWhiteNavbar} />
       </div>
     </nav>
   );

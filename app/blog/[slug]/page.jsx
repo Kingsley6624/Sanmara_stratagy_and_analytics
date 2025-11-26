@@ -5,6 +5,7 @@ import path from "path";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { FaArrowRight } from "react-icons/fa6";
 const BlogPage = async ({ params }) => {
   // Await params if it's a promise
@@ -21,13 +22,10 @@ const BlogPage = async ({ params }) => {
     return content.slug === slug;
   });
 
-  if (!blogFile) {
-    return (
-      <div className="mt-24 py-20 text-center text-gray-600">
-        Blog not found
-      </div>
-    );
-  }
+if (!blogFile) {
+  notFound();
+}
+
 
   const post = JSON.parse(
     fs.readFileSync(path.join(blogsDir, blogFile), "utf-8")
@@ -40,7 +38,7 @@ const BlogPage = async ({ params }) => {
         <meta name="description" content={post.meta_description} />
       </Head>
       
-      <article className="prose mx-auto pt-10 mt-12 md:mt-24 px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <article className="prose mx-auto pt-10 mt-12 md:mt-24 px-4 sm:px-6 lg:px-8 max-w-5xl">
         <header className="mb-6">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
             {post.title}
@@ -80,7 +78,7 @@ const BlogPage = async ({ params }) => {
               </h3>
             )}
             {section.points && (
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-disc list-outside space-y-2 text-gray-700 pl-4">
                 {section.points.map((item, index) => {
                   const [boldPart, ...rest] = item.split(":");
                   const remainingText = rest.join(":").trim();
@@ -94,7 +92,7 @@ const BlogPage = async ({ params }) => {
               </ul>
             )}
             {section.steps && (
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-disc list-outside space-y-2 text-gray-700 pl-4">
                 {section.steps.map((item, index) =>  (
                     <li key={index}>
                        {item}
@@ -106,25 +104,25 @@ const BlogPage = async ({ params }) => {
 
             {/* Case study / example */}
             {section.case_study && (
-              <p className="mt-2 italic text-gray-600">
+              <p className="mt-4 italic text-gray-600">
                 <strong>Case Study: </strong>
                 {section.case_study}
               </p>
             )}
             {section.example && (
-              <p className="mt-2 italic text-gray-600">
+              <p className="mt-4 italic text-gray-600">
                 <strong>Example: </strong>
                 {section.example}
               </p>
             )}
             {section.data_insight && (
-              <p className="mt-2 italic text-gray-600">
+              <p className="mt-4 italic text-gray-600">
                 <strong>Data Insight: </strong>
                 {section.data_insight}
               </p>
             )}
             {section.sanmara_role && (
-              <p className="mt-2 italic text-gray-600">
+              <p className="mt-4 italic text-gray-600">
                 <strong>Sanmara Role: </strong>
                 {section.sanmara_role}
               </p>
@@ -145,7 +143,7 @@ const BlogPage = async ({ params }) => {
       </article>
       {post.call_to_action && (
           <div className="mt-12 bg-linear-to-br from-slate-900 via-blue-900 to-indigo-800 text-white  p-6 py-12 text-center">
-            <p className="text-base md:text-base mb-4 max-w-6xl">
+            <p className="text-base md:text-base mb-4">
               {post.call_to_action}
             </p>
             <Link

@@ -1,14 +1,13 @@
 "use client";
 import { useSidebar } from "./NavigationWrapper";
 import Link from "next/link";
-import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 
 const SideBar = () => {
-  const { isOpen, setIsOpen, expanded, toggleExpand } = useSidebar();
+  const { isOpen, setIsOpen } = useSidebar();
   const [showSidebar, setShowSidebar] = useState(false);
 
-  // Helps trigger animation after mount
+  // Trigger sidebar slide animation
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => setShowSidebar(true), 10);
@@ -17,44 +16,48 @@ const SideBar = () => {
     }
   }, [isOpen]);
 
+  const navItems = [
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/industries", label: "Industries" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact", isButton: true },
+  ];
+
   return (
-    <div>
+    <>
       {isOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black/70 z-30 shadow-lg flex justify-end md:hidden mt-12 transition-opacity duration-300"
+          className="fixed top-0 left-0 w-full h-full bg-black/70 z-30 flex justify-end md:hidden transition-opacity duration-300 mt-12"
           onClick={() => setIsOpen(false)}
         >
           <div
-            className={`w-[50%] max-w-sm h-screen bg-white p-3 pt-8 z-50 shadow-lg flex flex-col overflow-y-auto scroll-smooth transform transition-transform duration-500 ease-in-out ${
+            className={`w-1/2 max-w-sm h-screen bg-white p-6 pt-8 z-50 flex flex-col overflow-y-auto transform transition-transform duration-500 ease-in-out ${
               showSidebar ? "translate-x-0" : "translate-x-full"
             }`}
-            onClick={(e) => e.stopPropagation()} // prevent overlay click from closing immediately
+            onClick={(e) => e.stopPropagation()} // prevent overlay click
           >
-            <div className="text-[#696969ff] font-medium text-base z-50">
-              <ul className="space-y-6 text-sm font-medium text-gray-700 h-20 flex flex-col divide-y">
-                {[
-                  { href: "/about", label: "About" },
-                  { href: "/services", label: "Services" },
-                  { href: "/industries", label: "Industries" },
-                  { href: "/blog", label: "Blog" },
-                  { href: "/contact", label: "Contact" },
-                ].map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="relative h-full flex items-center px-2 transition-all duration-300 hover:text-blue-900"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="flex flex-col space-y-4 w-full">
+              {navItems.map((item) => (
+                <li key={item.href} className="w-full">
+                  <Link
+                    href={item.href}
+                    className={`w-full block py-2 px-4 rounded-md font-medium transition-colors duration-300 ${
+                      item.isButton
+                        ? "bg-blue-600 text-white border border-blue-600 hover:bg-blue-700 text-center"
+                        : "text-gray-700 hover:text-blue-900"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
