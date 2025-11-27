@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import NavigationWrapper from "../components/NavigationWrapper";
 import WhatsAppButton from "@/components/WhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
+import { OrganizationSchema } from "@/components/OrganizationSchema";
 
 
 const openSans = Open_Sans({
@@ -33,6 +34,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${openSans.variable} ${lora.variable}`}>
+      <head>
+        <OrganizationSchema />
+        </head>
       <body>
         <ScrollToTop>
         <NavigationWrapper>

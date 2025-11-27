@@ -9,17 +9,16 @@ import ToggleMenu from "./ToggleMenu";
 const NavBar = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const isNotFoundPage = pathname === "/404";
 
 
 
 
   const isSingleBlogPage =
     pathname.startsWith("/blog/") && pathname !== "/blog";
-  const isScrollEnabled = !isSingleBlogPage && !isNotFoundPage;
+  const isScrollEnabled = !isSingleBlogPage;
 
 
-  const isWhiteNavbar = isNotFoundPage || scrolled || isSingleBlogPage;
+  const isWhiteNavbar =  scrolled || isSingleBlogPage;
 
 
   // Scroll listener
@@ -78,7 +77,7 @@ const NavBar = () => {
               ) : (
                 <Link
                   href={link.href}
-                  cl            assName={`relative flex items-center px-2 transition-all duration-300 
+                  className={`relative flex items-center px-2 transition-all duration-300 
                     after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:transition-all 
                     hover:after:w-full
                     ${
