@@ -35,22 +35,20 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${openSans.variable} ${lora.variable}`}>
-      <head>
-        <script
-          id="organization-schema-ld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(orgSchema),
-          }}
-        />
-      </head>
+      <Script
+        id="organization-schema-ld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(orgSchema),
+        }}
+      />
 
       <body>
         <ScrollToTop>
         <NavigationWrapper>
           <NavBar />
-        
-        <SideBar />
+          <SideBar />
          {children}
         </NavigationWrapper>
         <WhatsAppButton />
