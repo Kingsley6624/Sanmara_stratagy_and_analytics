@@ -35,6 +35,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${openSans.variable} ${lora.variable}`}>
+      <head>
+        <script
+          id="organization-schema-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(orgSchema),
+          }}
+        />
+      </head>
 
       <body>
         <ScrollToTop>
@@ -48,15 +57,6 @@ export default function RootLayout({ children }) {
         <Footer />
         
         </ScrollToTop>
-
-       <Script
-  id="organization-schema-ld"
-  type="application/ld+json"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(orgSchema),
-  }}
-/>
       </body>
     </html>
   );
