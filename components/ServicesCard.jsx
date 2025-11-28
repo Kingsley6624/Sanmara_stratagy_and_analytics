@@ -16,7 +16,7 @@ const getVariant = (index) => {
 
 const ServicesCard = ({ icon, title, desc, index, href }) => {
   return (
-    <Link href={href || "#"} target="_blank" rel="noopener noreferrer">
+    <Link href="/services">
       <motion.div
         key={index}
         className="w-full max-w-full bg-[#EFF6FF] p-4 rounded-lg shadow-sm 

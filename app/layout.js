@@ -7,7 +7,7 @@ import NavigationWrapper from "../components/NavigationWrapper";
 import WhatsAppButton from "@/components/WhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
 import { orgSchema } from "@/components/orgSchema";
-import Script from "next/script";
+
 
 
 const openSans = Open_Sans({
@@ -35,7 +35,8 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${openSans.variable} ${lora.variable}`}>
-      <Script
+      <head>
+        <script
         id="organization-schema-ld"
         type="application/ld+json"
         strategy="beforeInteractive"
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
           __html: JSON.stringify(orgSchema),
         }}
       />
+      </head>
 
       <body>
         <ScrollToTop>

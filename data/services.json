@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "slug": "business-market-research",
     "title": "Business & Market Research",
     "desc": "We deliver evidence-based market, competitor, and customer insights to guide strategic, data driven decisions.",
     "body": "We provide deep, evidence based insights into your markets, competitors, and customers to help you make confident strategic moves and anticipate trends.",
@@ -10,11 +11,11 @@
       "Competitor intelligence",
       "Customer and behavioral research",
       "Feasibility and growth studies"
-    ],
-    "href": "https://drive.google.com/file/d/1ilcT92OC6E1oAuy4EtAB7FVRFRAzRCOE/view?usp=sharing"
+    ]
   },
   {
     "id": 2,
+    "slug": "data-driven-business-intelligence",
     "title": "Data Driven Business Intelligence",
     "desc": "we transforms raw data into strategic insights using analytics, dashboards, and AI-powered decisions.",
     "body": "We turn raw data into strategic insight. SanMara helps organizations leverage analytics, dashboards, and AI tools to make informed, real time decisions.",
@@ -24,11 +25,11 @@
       "Predictive analytics and modeling",
       "KPI dashboards and performance metrics",
       "Data infrastructure and integration advisory"
-    ],
-    "href": "https://drive.google.com/file/d/1ilcT92OC6E1oAuy4EtAB7FVRFRAzRCOE/view?usp=sharing"
+    ]
   },
   {
     "id": 3,
+    "slug": "corporate-finance",
     "title": "Corporate Finance",
     "desc": "We help startups and SMEs unlock value and make bold, data driven decisions that fuel growth.",
     "body": "We help startups and SMEs unlock value and make bold, data driven decisions that fuel growth.",
@@ -39,11 +40,11 @@
       "Buying a business",
       "Business valuation",
       "Product valuation"
-    ],
-    "href": "https://drive.google.com/file/d/1ilcT92OC6E1oAuy4EtAB7FVRFRAzRCOE/view?usp=sharing"
+    ]
   },
   {
     "id": 4,
+    "slug": "financial-strategic-consulting",
     "title": "Financial & Strategic Consulting",
     "desc": "Partnering with businesses to align financial performance with strategy, ensuring every decision drives value.",
     "body": "We partner with businesses to align financial performance with long term strategy. From forecasting and cost analysis to capital strategy and business transformation, we ensure that every decision adds value.",
@@ -53,11 +54,11 @@
       "Strategic planning and advisory",
       "Investment and profitability modeling",
       "Business restructuring and optimization"
-    ],
-    "href": "https://drive.google.com/file/d/1ilcT92OC6E1oAuy4EtAB7FVRFRAzRCOE/view?usp=sharing"
+    ]
   },
   {
     "id": 5,
+    "slug": "risk-management-fraud-analytics",
     "title": "Risk Management & Fraud Analytics",
     "desc": "We leverage advanced analytics to detect fraud patterns, enhance monitoring, and fortify organizational defenses.",
     "body": "Fraud erodes trust and profitability, we help you stay ahead of it. Our data-driven fraud analytics framework identifies suspicious patterns, enhances transaction monitoring, and strengthens fraud defense mechanisms.",
@@ -67,7 +68,6 @@
       "Risk scoring and behavior analysis",
       "Compliance and risk advisory",
       "Transaction pattern analytics"
-    ],
-    "href": "https://drive.google.com/file/d/1ilcT92OC6E1oAuy4EtAB7FVRFRAzRCOE/view?usp=sharing"
+    ]
   }
 ]

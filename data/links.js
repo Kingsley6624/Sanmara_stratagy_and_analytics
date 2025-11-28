@@ -55,19 +55,19 @@ export const footerData = {
     "links": [
       {
         "title": "Latest Articles",
-        "href": "/blog/latest-articles"
+        "href": "/blog"
       },
       {
         "title": "Tutorials",
-        "href": "/blog/tutorials"
+        "href": "/blog"
       },
       {
         "title": "Case Studies",
-        "href": "/blog/case-studies"
+        "href": "/blog"
       },
       {
         "title": "Industry News",
-        "href": "/blog/industry-news"
+        "href": "/blog"
       }
     ]
   },

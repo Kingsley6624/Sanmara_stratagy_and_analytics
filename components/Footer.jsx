@@ -4,7 +4,7 @@ import { footerData } from "../data/links";
 
 const Footer = () => {
   return (
-    <section className="py-6 bg-slate-900 text-white px-[3%]">
+    <section className="pt-12 pb-6 bg-slate-900 text-white px-[3%]">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row mb-6 md:mb-12 justify-center md:justify-start items-center md:items-start">
         {/* Logo */}
@@ -29,7 +29,7 @@ const Footer = () => {
                 return (
                   <li
                     key={i}
-                    className="mb-2 text-gray-400 text-sm flex items-center"
+                    className="mb-2 text-gray-400 text-sm md:text-base flex items-center"
                   >
                     {Icon && <Icon className="mr-2" />}
                     {sublink.href ? (
